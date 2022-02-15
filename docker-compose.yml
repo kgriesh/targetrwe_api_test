@@ -8,7 +8,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      #- data:/var/lib/postgresql/data
       - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
   server:
     build:
